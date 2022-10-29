@@ -1,4 +1,3 @@
-from mimetypes import init
 import random
 
 def merge(arr, l, m, r):
@@ -43,7 +42,7 @@ def mergeSort(arr, l, r):
         mergeSort(arr, m+1, r)
         merge(arr, l, m, r)
 
-class GenereadorSeceuencia:
+class GeneradorSecuencia:
 
     def __init__(self, tamanoSecuencia) :
         self.tamanoSecuencia = tamanoSecuencia
@@ -78,9 +77,3 @@ class GenereadorSeceuencia:
                     self.secuencia[j+1] = auxiliar.pop(0)
                 j += 1
             i += 1        
-    
-def main():
-    """ x = GenereadorSeceuencia(10)
-    y = x.getSecuencia()
-    print(y) """
-main()
