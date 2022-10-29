@@ -47,8 +47,6 @@ class GeneradorSecuencia:
     def __init__(self, tamanoSecuencia) :
         self.tamanoSecuencia = tamanoSecuencia
         self.secuencia = []
-        self.creaSecuencia(tamanoSecuencia)
-        self.creaSecuenciaCiclica()
 
     def getSecuencia(self):
         return self.secuencia
@@ -61,6 +59,7 @@ class GeneradorSecuencia:
                 secuencia.append(numeroGenerado)
         mergeSort(secuencia,0,len(secuencia)-1)
         self.secuencia = secuencia    
+        return secuencia
 
     def creaSecuenciaCiclica(self):
         indiceCiclo = random.randint(0, len(self.secuencia)-1)
@@ -76,4 +75,4 @@ class GeneradorSecuencia:
                     auxiliar.append(self.secuencia[j+1])
                     self.secuencia[j+1] = auxiliar.pop(0)
                 j += 1
-            i += 1        
+            i += 1      
