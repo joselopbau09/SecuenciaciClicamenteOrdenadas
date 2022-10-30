@@ -34,9 +34,11 @@ class Buscador:
             self.operacionesAritmeticas += 1
             if (self.secuencia[mitad] < self.secuencia[indiceDer]):
                 self.operacionesComparacion += 1
-
+                self.operacionesAsignacion += 1
+        
                 return self.encuentraIndice(indiceIzq, mitad)
             else:
                 self.operacionesComparacion += 1
+                self.operacionesAsignacion += 1
 
                 return self.encuentraIndice(mitad + 1, indiceDer)

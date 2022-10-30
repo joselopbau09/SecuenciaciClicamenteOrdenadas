@@ -14,7 +14,7 @@ def getInt(mensaje, error,min, max):
             print(error)
 
 def main():
-    tamanoEjemplar = getInt('Ingresa el tamaño del ejemplar:', 'Ingresa una opción valida', 1, 2**40)
+    tamanoEjemplar = getInt('Ingresa el tamaño del ejemplar(un número entero mayor que cero):', 'Ingresa una opción valida', 1, 2**40)
     secuenciaGenerada = GeneradorSecuencia(tamanoEjemplar)
     elementosGenerados = secuenciaGenerada.creaSecuencia(tamanoEjemplar)
     
@@ -33,8 +33,11 @@ def main():
     operacionesAritmeticas = buscador.getAritmeticas()
     operacionesAsignacion = buscador.getAsignacion()
     operacionesComparacion = buscador.getComparacion()
+    operacionesTotales = operacionesAritmeticas + operacionesAsignacion + operacionesComparacion
+    
     print(f'Comparaciones: {operacionesComparacion}')
     print(f'Asignación: {operacionesAsignacion}')
     print(f'Op aritmeticas: {operacionesAritmeticas}')
+    print(f'Operaciones totales: {operacionesTotales}')
 
 main()
